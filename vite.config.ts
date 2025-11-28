@@ -12,15 +12,7 @@ export default defineConfig({
 
   build: {
     chunkSizeWarningLimit: 5000,
-    // for better chunking
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          vendor: ['react', 'react-dom'],
-          animation: ['framer-motion']
-        }
-      }
-    }
+    outDir: 'dist',
   },
 
   resolve: {
@@ -29,6 +21,5 @@ export default defineConfig({
     },
   },
   
-  // this for Netlify
-  base: './'
+  base: './',
 });
