@@ -1,98 +1,334 @@
 {
   "en": {
-    "name": "Your Name",
-    "title": "Full Stack Developer",
-    "email": "your.email@example.com",
-    "phone": "+1234567890",
-    "location": "Your City, Country",
-    "summary": "Experienced full-stack developer with expertise in modern web technologies...",
+    "name": "Ethem Deli",
+    "title": "Data Management & Operations Specialist",
+    "email": "ethemdeli.tr@gmail.com",
+    "phone": "+974 5060 6655",
+    "location": "Qatar",
+    "summary": "Detail-oriented and highly organized Data Management & Operations Specialist with 11+ years of experience in data entry, document control, inventory operations, and customer service. Skilled in Microsoft Office Suite, SAP, EDMS, and web technologies (HTML, CSS, JavaScript). Adept at ensuring data accuracy, streamlining workflows, and leveraging technology to enhance operational efficiency. A problem-solver with strong analytical and communication skills, fluent in Turkish, Arabic, and English. Proven ability to handle large-scale data, manage documentation, and improve operational processes.",
     "experience": [
       {
-        "position": "Senior Developer",
-        "company": "Tech Company",
-        "period": "2020 - Present",
-        "description": "Developed and maintained web applications..."
+        "position": "Inventory Controller/Store Manager",
+        "company": "Khonaysser Power Factory-Volvo Penta Dealer",
+        "period": "January 2022 – March 2025",
+        "description": "Monitoring and maintaining inventory levels, processing purchasing orders, tracking orders, recording purchases, performing physical count of inventory, developing inventory control systems, liaising with vendors, forecasting supply and demand, analyzing supply chain data, managing store staff, and ensuring store organization."
+      },
+      {
+        "position": "Purchasing Officer / Storekeeper",
+        "company": "United Food Services",
+        "period": "September 2020 – December 2021",
+        "description": "Managing store operations, checking storage conditions, verifying product quality, purchasing items, receiving and booking invoices, coordinating shipments, managing SAP operations, inventory management, and ensuring compliance with safety and hygiene requirements."
+      },
+      {
+        "position": "Senior Officer – Document Controller/Data Encoder",
+        "company": "Blue Chip (Trading Company)",
+        "period": "September 2016 – August 2020",
+        "description": "Preparing and sorting documents for data entry, entering data into database software, resolving discrepancies, creating data backups, managing document flow, reviewing technical documents, maintaining confidentiality, and creating reports."
+      },
+      {
+        "position": "Officer – Data Encoder",
+        "company": "RUMCO (Trading and Contracting)",
+        "period": "July 2013 – July 2016",
+        "description": "Inputting customer and account data, compiling and verifying information accuracy, researching incomplete documents, generating reports, performing backup operations, maintaining confidentiality, and ensuring data integrity and security."
       }
     ],
     "education": [
       {
-        "degree": "Bachelor in Computer Science",
-        "institution": "University Name",
-        "year": "2020"
+        "degree": "Bachelor of Science in Software Development",
+        "institution": "Brigham Young University Idaho (Online)",
+        "year": "Expected August 2026"
+      },
+      {
+        "degree": "Associate Degree in Software Development",
+        "institution": "Brigham Young University Idaho (Online)",
+        "year": "Expected June 2026"
+      },
+      {
+        "degree": "Certificate: Web & Computer Programming",
+        "institution": "Brigham Young University Idaho",
+        "year": "Awarded"
+      },
+      {
+        "degree": "Certificate: Web Development",
+        "institution": "Brigham Young University Idaho",
+        "year": "Expected February 2026"
+      },
+      {
+        "degree": "Certificate: Software Development",
+        "institution": "Brigham Young University Idaho",
+        "year": "Expected February 2026"
+      },
+      {
+        "degree": "Certificate: BYU Pathway Connect",
+        "institution": "Brigham Young University",
+        "year": "Completed"
+      },
+      {
+        "degree": "Certificate: Document Control & Microsoft Office Fundamentals",
+        "institution": "Filipino Institute",
+        "year": "Completed"
       }
     ],
-    "skills": ["React", "Node.js", "TypeScript", "MongoDB", "PostgreSQL"]
+    "skills": [
+      "Microsoft Office Suite (Excel, Word, PowerPoint)",
+      "SAP & EDMS Proficiency",
+      "Data Entry & Document Control",
+      "HTML, CSS, JavaScript",
+      "Inventory & Stock Control",
+      "Demand Forecasting",
+      "Data Validation & Quality Assurance",
+      "Process Optimization",
+      "Customer Service",
+      "Turkish, Arabic, English"
+    ]
   },
   "ar": {
-    "name": "اسمك",
-    "title": "مطور Full Stack",
-    "email": "your.email@example.com",
-    "phone": "+1234567890",
-    "location": "مدينتك، بلدك",
-    "summary": "مطور Full Stack ذو خبرة في تقنيات الويب الحديثة...",
+    "name": "إيثيم دلي",
+    "title": "أخصائي إدارة البيانات والعمليات",
+    "email": "ethemdeli.tr@gmail.com",
+    "phone": "+974 5060 6655",
+    "location": "قطر",
+    "summary": "أخصائي إدارة البيانات والعمليات منظم للغاية ويهتم بالتفاصيل مع خبرة تزيد عن 11 عامًا في إدخال البيانات، والتحكم في المستندات، وعمليات المخزون، وخدمة العملاء. ماهر في Microsoft Office Suite وSAP وEDMS وتقنيات الويب (HTML, CSS, JavaScript). ماهر في ضمان دقة البيانات، وتبسيط سير العمل، والاستفادة من التكنولوجيا لتعزيز الكفاءة التشغيلية. يحل المشكلات بمهارات تحليلية وتواصل قوية، ويتقن التركية والعربية والإنجليزية. قدرة مثبتة على التعامل مع البيانات واسعة النطاق، وإدارة الوثائق، وتحسين العمليات التشغيلية.",
     "experience": [
       {
-        "position": "مطور أول",
-        "company": "شركة التقنية",
-        "period": "٢٠٢٠ - الحاضر",
-        "description": "تطوير وصيانة تطبيقات الويب..."
+        "position": "مراقب المخزون/مدير المتجر",
+        "company": "مصنع خنيسر للطاقة - تاجر فولفو بنتا",
+        "period": "يناير 2022 – مارس 2025",
+        "description": "مراقبة والحفاظ على مستويات المخزون، ومعالجة أوامر الشراء، وتتبع الطلبات، وتسجيل المشتريات، وإجراء العد الفعلي للمخزون، وتطوير أنظمة التحكم في المخزون، والتواصل مع الموردين، والتنبؤ بالعرض والطلب، وتحليل بيانات سلسلة التوريد، وإدارة موظفي المتجر، وضمان تنظيم المتجر."
+      },
+      {
+        "position": "موظف مشتريات / أمين مخزن",
+        "company": "يونايتد فود سيرفيسز",
+        "period": "سبتمبر 2020 – ديسمبر 2021",
+        "description": "إدارة عمليات المتجر، والتحقق من ظروف التخزين، والتحقق من جودة المنتج، وشراء العناصر، واستلام وفواتير الفواتير، وتنسيق الشحنات، وإدارة عمليات SAP، وإدارة المخزون، وضمان الامتثال لمتطلبات السلامة والنظافة."
+      },
+      {
+        "position": "ضابط أول - مراقب وثائق / مشفر بيانات",
+        "company": "بلو تشيب (شركة تجارية)",
+        "period": "سبتمبر 2016 – أغسطس 2020",
+        "description": "إعداد وفرز المستندات لإدخال البيانات، وإدخال البيانات في برنامج قاعدة البيانات، وحل التناقضات، وإنشاء نسخ احتياطية للبيانات، وإدارة تدفق المستندات، ومراجعة المستندات الفنية، والحفاظ على السرية، وإنشاء التقارير."
+      },
+      {
+        "position": "ضابط - مشفر بيانات",
+        "company": "رومكو (تجارة ومقاولات)",
+        "period": "يوليو 2013 – يوليو 2016",
+        "description": "إدخال بيانات العملاء والحسابات، وتجميع والتحقق من دقة المعلومات، والبحث في المستندات غير المكتملة، وإنشاء التقارير، وإجراء عمليات النسخ الاحتياطي، والحفاظ على السرية، وضمان سلامة وأمن البيانات."
       }
     ],
     "education": [
       {
-        "degree": "بكالوريوس في علوم الحاسب",
-        "institution": "اسم الجامعة",
-        "year": "٢٠٢٠"
+        "degree": "بكالوريوس علوم في تطوير البرمجيات",
+        "institution": "جامعة بريغهام يونغ ايداهو (أونلاين)",
+        "year": "متوقع أغسطس 2026"
+      },
+      {
+        "degree": "دبلوم في تطوير البرمجيات",
+        "institution": "جامعة بريغهام يونغ ايداهو (أونلاين)",
+        "year": "متوقع يونيو 2026"
+      },
+      {
+        "degree": "شهادة: برمجة الويب والحاسوب",
+        "institution": "جامعة بريغهام يونغ ايداهو",
+        "year": "تم منحها"
+      },
+      {
+        "degree": "شهادة: تطوير الويب",
+        "institution": "جامعة بريغهام يونغ ايداهو",
+        "year": "متوقع فبراير 2026"
+      },
+      {
+        "degree": "شهادة: تطوير البرمجيات",
+        "institution": "جامعة بريغهام يونغ ايداهو",
+        "year": "متوقع فبراير 2026"
+      },
+      {
+        "degree": "شهادة: BYU Pathway Connect",
+        "institution": "جامعة بريغهام يونغ",
+        "year": "مكتمل"
+      },
+      {
+        "degree": "شهادة: التحكم في الوثائق وأساسيات Microsoft Office",
+        "institution": "المعهد الفلبيني",
+        "year": "مكتمل"
       }
     ],
-    "skills": ["React", "Node.js", "TypeScript", "MongoDB", "PostgreSQL"]
+    "skills": [
+      "Microsoft Office Suite (Excel, Word, PowerPoint)",
+      "SAP & EDMS",
+      "إدخال البيانات والتحكم في المستندات",
+      "HTML, CSS, JavaScript",
+      "التحكم في المخزون والمخزون",
+      "التنبؤ بالطلب",
+      "التحقق من البيانات وضمان الجودة",
+      "تحسين العمليات",
+      "خدمة العملاء",
+      "التركية، العربية، الإنجليزية"
+    ]
   },
   "tr": {
-    "name": "Adınız",
-    "title": "Full Stack Geliştirici",
-    "email": "your.email@example.com",
-    "phone": "+1234567890",
-    "location": "Şehriniz, Ülkeniz",
-    "summary": "Modern web teknolojilerinde uzman, deneyimli full-stack geliştirici...",
+    "name": "Ethem Deli",
+    "title": "Veri Yönetimi ve Operasyon Uzmanı",
+    "email": "ethemdeli.tr@gmail.com",
+    "phone": "+974 5060 6655",
+    "location": "Katar",
+    "summary": "11+ yıllık deneyime sahip, detay odaklı ve son derece organize Veri Yönetimi ve Operasyon Uzmanı. Veri girişi, doküman kontrolü, envanter operasyonları ve müşteri hizmetleri konularında uzman. Microsoft Office Suite, SAP, EDMS ve web teknolojilerinde (HTML, CSS, JavaScript) yetenekli. Veri doğruluğunu sağlama, iş akışlarını optimize etme ve operasyonel verimliliği artırmak için teknolojiyi kullanma konularında uzman. Türkçe, Arapça ve İngilizce bilen, güçlü analitik ve iletişim becerilerine sahip bir problem çözücü. Büyük ölçekli verileri yönetme, dokümantasyon yönetimi ve operasyonel süreçleri iyileştirme konularında kanıtlanmış yetenek.",
     "experience": [
       {
-        "position": "Kıdemli Geliştirici",
-        "company": "Teknoloji Şirketi",
-        "period": "2020 - Günümüz",
-        "description": "Web uygulamaları geliştirdi ve sürdürdü..."
+        "position": "Envanter Kontrolörü/Mağaza Müdürü",
+        "company": "Khonaysser Power Factory-Volvo Penta Bayisi",
+        "period": "Ocak 2022 – Mart 2025",
+        "description": "Envanter seviyelerini izleme ve koruma, satın alma siparişlerini işleme, sipariş takibi, satın alma kayıtları, fiziksel envanter sayımı, envanter kontrol sistemleri geliştirme, tedarikçilerle ilişkiler, arz ve talep tahmini, tedarik zinciri veri analizi, mağaza personeli yönetimi ve mağaza organizasyonu sağlama."
+      },
+      {
+        "position": "Satın Alma Görevlisi / Depo Sorumlusu",
+        "company": "United Food Services",
+        "period": "Eylül 2020 – Aralık 2021",
+        "description": "Mağaza operasyonlarını yönetme, depolama koşullarını kontrol etme, ürün kalitesini doğrulama, ürün satın alma, fatura alma ve kaydetme, sevkiyat koordinasyonu, SAP operasyonları yönetimi, envanter yönetimi, güvenlik ve hijyen gerekliliklerine uyum sağlama."
+      },
+      {
+        "position": "Kıdemli Görevli - Doküman Kontrolörü/Veri Kodlayıcı",
+        "company": "Blue Chip (Ticaret Şirketi)",
+        "period": "Eylül 2016 – Ağustos 2020",
+        "description": "Veri girişi için doküman hazırlama ve sınıflandırma, veritabanı yazılımına veri girişi, tutarsızlıkları çözme, veri yedekleme oluşturma, doküman akışı yönetimi, teknik doküman inceleme, gizliliği koruma ve rapor oluşturma."
+      },
+      {
+        "position": "Görevli - Veri Kodlayıcı",
+        "company": "RUMCO (Ticaret ve Müteahhitlik)",
+        "period": "Temmuz 2013 – Temmuz 2016",
+        "description": "Müşteri ve hesap verisi girişi, bilgi doğruluğunu derleme ve doğrulama, eksik doküman araştırma, rapor oluşturma, yedekleme operasyonları, gizliliği koruma, veri bütünlüğü ve güvenliği sağlama."
       }
     ],
     "education": [
       {
-        "degree": "Bilgisayar Bilimleri Lisansı",
-        "institution": "Üniversite Adı",
-        "year": "2020"
+        "degree": "Yazılım Geliştirme Lisans Derecesi",
+        "institution": "Brigham Young University Idaho (Online)",
+        "year": "Beklenen Ağustos 2026"
+      },
+      {
+        "degree": "Yazılım Geliştirme Önlisans Derecesi",
+        "institution": "Brigham Young University Idaho (Online)",
+        "year": "Beklenen Haziran 2026"
+      },
+      {
+        "degree": "Sertifika: Web ve Bilgisayar Programlama",
+        "institution": "Brigham Young University Idaho",
+        "year": "Verildi"
+      },
+      {
+        "degree": "Sertifika: Web Geliştirme",
+        "institution": "Brigham Young University Idaho",
+        "year": "Beklenen Şubat 2026"
+      },
+      {
+        "degree": "Sertifika: Yazılım Geliştirme",
+        "institution": "Brigham Young University Idaho",
+        "year": "Beklenen Şubat 2026"
+      },
+      {
+        "degree": "Sertifika: BYU Pathway Connect",
+        "institution": "Brigham Young University",
+        "year": "Tamamlandı"
+      },
+      {
+        "degree": "Sertifika: Doküman Kontrolü ve Microsoft Office Temelleri",
+        "institution": "Filipin Enstitüsü",
+        "year": "Tamamlandı"
       }
     ],
-    "skills": ["React", "Node.js", "TypeScript", "MongoDB", "PostgreSQL"]
+    "skills": [
+      "Microsoft Office Suite (Excel, Word, PowerPoint)",
+      "SAP & EDMS",
+      "Veri Girişi ve Doküman Kontrolü",
+      "HTML, CSS, JavaScript",
+      "Envanter ve Stok Kontrolü",
+      "Talep Tahmini",
+      "Veri Doğrulama ve Kalite Güvencesi",
+      "Süreç Optimizasyonu",
+      "Müşteri Hizmetleri",
+      "Türkçe, Arapça, İngilizce"
+    ]
   },
   "tl": {
-    "name": "Iyong Pangalan",
-    "title": "Full Stack Developer",
-    "email": "your.email@example.com",
-    "phone": "+1234567890",
-    "location": "Iyong Lungsod, Bansa",
-    "summary": "Espesyalista sa modernong web technologies na may karanasan bilang full-stack developer...",
+    "name": "Ethem Deli",
+    "title": "Data Management & Operations Specialist",
+    "email": "ethemdeli.tr@gmail.com",
+    "phone": "+974 5060 6655",
+    "location": "Qatar",
+    "summary": "Detail-oriented at lubos na organisadong Data Management & Operations Specialist na may 11+ taong karanasan sa data entry, document control, inventory operations, at customer service. Sanay sa Microsoft Office Suite, SAP, EDMS, at web technologies (HTML, CSS, JavaScript). Mahusay sa pagtiyak ng katumpakan ng data, pagpapadali ng workflow, at paggamit ng teknolohiya upang mapahusay ang operational efficiency. Isang problem-solver na may malakas na analytical at communication skills, fluent sa Turkish, Arabic, at English. Napatunayang kakayahan sa paghawak ng malawakang data, pamamahala ng dokumentasyon, at pagpapabuti ng operational processes.",
     "experience": [
       {
-        "position": "Senior Developer",
-        "company": "Tech Company",
-        "period": "2020 - Kasalukuyan",
-        "description": "Bumuo at nagpanatili ng web applications..."
+        "position": "Inventory Controller/Store Manager",
+        "company": "Khonaysser Power Factory-Volvo Penta Dealer",
+        "period": "Enero 2022 – Marso 2025",
+        "description": "Pagmomonitor at pagpapanatili ng kasalukuyang antas ng imbentaryo; pagproseso ng mga purchase order kung kinakailangan; pagsubaybay sa mga order at pagsisiyasat ng mga problema. Pagtatala ng mga pagbili, pagpapanatili ng database, pagsasagawa ng pisikal na bilang ng imbentaryo, at pagtutugma ng aktwal na stock count sa computer-generated na mga ulat."
+      },
+      {
+        "position": "Purchasing Officer / Storekeeper",
+        "company": "United Food Services",
+        "period": "Setyembre 2020 – Disyembre 2021",
+        "description": "Pamamahala ng tindahan at koponan ng tindahan; pang-araw-araw na pagsusuri ng mga kondisyon ng imbakan; pagbili ng mga kinakailangang item; pagtanggap at pag-book ng mga invoice; koordinasyon ng mga shipment; pamamahala ng mga operasyon ng SAP; pamamahala ng imbentaryo; at pagsiguro ng pagsunod sa mga kinakailangan sa kaligtasan at kalinisan."
+      },
+      {
+        "position": "Senior Officer – Document Controller/Data Encoder",
+        "company": "Blue Chip (Trading Company)",
+        "period": "Setyembre 2016 – Agosto 2020",
+        "description": "Paghahanda at pag-uuri ng mga dokumento para sa pagpasok ng data; pagpasok ng data sa database software; paglutas ng mga pagkakaiba; paggawa ng mga backup ng data; pamamahala ng daloy ng dokumentasyon; pagsusuri ng mga teknikal na dokumento; pagpapanatili ng confidentiality; at paggawa ng mga ulat."
+      },
+      {
+        "position": "Officer – Data Encoder",
+        "company": "RUMCO (Trading and Contracting)",
+        "period": "Hulyo 2013 – Hulyo 2016",
+        "description": "Pagpasok ng data ng customer at account; pagsasama-sama at pag-verify ng katumpakan ng impormasyon; pananaliksik para sa mga hindi kumpletong dokumento; pagbuo ng mga ulat; pagsasagawa ng mga backup operation; pagpapanatili ng confidentiality; at pagsiguro ng integridad at seguridad ng data."
       }
     ],
     "education": [
       {
-        "degree": "Bachelor sa Computer Science",
-        "institution": "Pangalan ng Unibersidad",
-        "year": "2020"
+        "degree": "Bachelor of Science in Software Development",
+        "institution": "Brigham Young University Idaho (Online)",
+        "year": "Inaasahan Agosto 2026"
+      },
+      {
+        "degree": "Associate Degree in Software Development",
+        "institution": "Brigham Young University Idaho (Online)",
+        "year": "Inaasahan Hunyo 2026"
+      },
+      {
+        "degree": "Sertipiko: Web & Computer Programming",
+        "institution": "Brigham Young University Idaho",
+        "year": "Ipinagkaloob"
+      },
+      {
+        "degree": "Sertipiko: Web Development",
+        "institution": "Brigham Young University Idaho",
+        "year": "Inaasahan Pebrero 2026"
+      },
+      {
+        "degree": "Sertipiko: Software Development",
+        "institution": "Brigham Young University Idaho",
+        "year": "Inaasahan Pebrero 2026"
+      },
+      {
+        "degree": "Sertipiko: BYU Pathway Connect",
+        "institution": "Brigham Young University",
+        "year": "Nakumpleto"
+      },
+      {
+        "degree": "Sertipiko: Document Control & Microsoft Office Fundamentals",
+        "institution": "Filipino Institute",
+        "year": "Nakumpleto"
       }
     ],
-    "skills": ["React", "Node.js", "TypeScript", "MongoDB", "PostgreSQL"]
+    "skills": [
+      "Microsoft Office Suite (Excel, Word, PowerPoint)",
+      "SAP & EDMS",
+      "Data Entry at Document Control",
+      "HTML, CSS, JavaScript",
+      "Inventory at Stock Control",
+      "Demand Forecasting",
+      "Data Validation at Quality Assurance",
+      "Process Optimization",
+      "Customer Service",
+      "Turkish, Arabic, English"
+    ]
   }
 }
