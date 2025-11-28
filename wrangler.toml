@@ -1,0 +1,5 @@
+name = "delidev-portfolio"
+compatibility_date = "2026-01-01"
+
+[env.production]
+pages_build_output_dir = "./dist"
