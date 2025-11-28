@@ -98,185 +98,186 @@ export default function Home() {
       const doc = new jsPDF();
       
       // Add profile picture
-      const imgData = '/path/to/your/profile-picture.jpg';
+      const imgData = "assest/iamges/client/mobile.png";
       doc.addImage(imgData, 'JPEG', 15, 15, 30, 30);
       
       // CV content - Personal Information
-doc.setFontSize(20);
-doc.text(cvContent.name, 60, 25);
-doc.setFontSize(14);
-doc.text(cvContent.title, 60, 35);
-doc.text(cvContent.email, 60, 45);
-doc.text(cvContent.phone, 60, 55);
-doc.text(cvContent.location, 60, 65);
+      doc.setFontSize(20);
+      doc.setFont('times', 'bold');
+      doc.text(cvContent.name, 60, 25);
+      doc.setFontSize(14);
+      doc.setFont('times', 'normal');
+      doc.text(cvContent.title, 60, 35);
+      doc.text(cvContent.email, 60, 45);
+      doc.text(cvContent.phone, 60, 55);
+      doc.text(cvContent.location, 60, 65);
 
-// Professional Summary
-let yPosition = 85;
-doc.setFontSize(16);
-doc.setFont('helvetica', 'bold');
-doc.text('PROFILE SUMMARY', 20, yPosition);
-yPosition += 10;
-doc.setFontSize(10);
-doc.setFont('helvetica', 'normal');
-const summaryLines = doc.splitTextToSize(cvContent.summary, 170);
-doc.text(summaryLines, 20, yPosition);
-yPosition += (summaryLines.length * 4) + 15;
+      // Professional Summary
+      let yPosition = 85;
+      doc.setFontSize(16);
+      doc.setFont('times', 'bold');
+      doc.text('PROFILE SUMMARY', 20, yPosition);
+      yPosition += 10;
+      doc.setFontSize(10);
+      doc.setFont('times', 'normal');
+      const summaryLines = doc.splitTextToSize(cvContent.summary, 170);
+      doc.text(summaryLines, 20, yPosition);
+      yPosition += (summaryLines.length * 4) + 15;
 
-// Key Skills
-doc.setFontSize(16);
-doc.setFont('helvetica', 'bold');
-doc.text('KEY SKILLS', 20, yPosition);
-yPosition += 10;
-doc.setFontSize(10);
-doc.setFont('helvetica', 'normal');
+      // Key Skills
+      doc.setFontSize(16);
+      doc.setFont('times', 'bold');
+      doc.text('KEY SKILLS', 20, yPosition);
+      yPosition += 10;
+      doc.setFontSize(10);
+      doc.setFont('times', 'normal');
 
-// Split skills into two columns
-const skillsPerColumn = Math.ceil(cvContent.skills.length / 2);
-const skillsColumn1 = cvContent.skills.slice(0, skillsPerColumn);
-const skillsColumn2 = cvContent.skills.slice(skillsPerColumn);
+      // Split skills into two columns
+      const skillsPerColumn = Math.ceil(cvContent.skills.length / 2);
+      const skillsColumn1 = cvContent.skills.slice(0, skillsPerColumn);
+      const skillsColumn2 = cvContent.skills.slice(skillsPerColumn);
 
-skillsColumn1.forEach((skill, index) => {
-  doc.text(`• ${skill}`, 20, yPosition + (index * 5));
-});
+      skillsColumn1.forEach((skill, index) => {
+        doc.text(`• ${skill}`, 20, yPosition + (index * 5));
+      });
 
-skillsColumn2.forEach((skill, index) => {
-  doc.text(`• ${skill}`, 110, yPosition + (index * 5));
-});
+      skillsColumn2.forEach((skill, index) => {
+        doc.text(`• ${skill}`, 110, yPosition + (index * 5));
+      });
 
-yPosition += (skillsPerColumn * 5) + 15;
+      yPosition += (skillsPerColumn * 5) + 15;
 
-// Education
-doc.setFontSize(16);
-doc.setFont('helvetica', 'bold');
-doc.text('EDUCATION', 20, yPosition);
-yPosition += 10;
-doc.setFontSize(10);
-doc.setFont('helvetica', 'normal');
+      // Education
+      doc.setFontSize(16);
+      doc.setFont('times', 'bold');
+      doc.text('EDUCATION', 20, yPosition);
+      yPosition += 10;
+      doc.setFontSize(10);
+      doc.setFont('times', 'normal');
 
-cvContent.education.forEach((edu) => {
-  doc.setFont('helvetica', 'bold');
-  doc.text(edu.degree, 20, yPosition);
-  doc.setFont('helvetica', 'normal');
-  doc.text(edu.institution, 20, yPosition + 4);
-  doc.text(edu.year, 170, yPosition, { align: 'right' });
-  yPosition += 12;
-});
+      cvContent.education.forEach((edu) => {
+        doc.setFont('times', 'bold');
+        doc.text(edu.degree, 20, yPosition);
+        doc.setFont('times', 'normal');
+        doc.text(edu.institution, 20, yPosition + 4);
+        doc.text(edu.year, 170, yPosition, { align: 'right' });
+        yPosition += 12;
+      });
 
-yPosition += 10;
+      yPosition += 10;
 
-// Professional Experience
-doc.setFontSize(16);
-doc.setFont('helvetica', 'bold');
-doc.text('PROFESSIONAL EXPERIENCE', 20, yPosition);
-yPosition += 10;
-doc.setFontSize(10);
-doc.setFont('helvetica', 'normal');
+      // Professional Experience
+      doc.setFontSize(16);
+      doc.setFont('times', 'bold');
+      doc.text('PROFESSIONAL EXPERIENCE', 20, yPosition);
+      yPosition += 10;
+      doc.setFontSize(10);
+      doc.setFont('times', 'normal');
 
-cvContent.experience.forEach((exp, index) => {
-  // Check if we need a new page
-  if (yPosition > 250) {
-    doc.addPage();
-    yPosition = 20;
-  }
+      cvContent.experience.forEach((exp, index) => {
+        // Check if we need a new page
+        if (yPosition > 250) {
+          doc.addPage();
+          yPosition = 20;
+        }
 
-  // Position and Company
-  doc.setFont('helvetica', 'bold');
-  doc.text(exp.position, 20, yPosition);
-  doc.setFont('helvetica', 'normal');
-  doc.text(exp.company, 20, yPosition + 4);
-  
-  // Period
-  doc.text(exp.period, 170, yPosition, { align: 'right' });
-  
-  yPosition += 10;
-  
-  // Description
-  const descLines = doc.splitTextToSize(exp.description, 170);
-  doc.text(descLines, 20, yPosition);
-  yPosition += (descLines.length * 4) + 8;
+        // Position and Company
+        doc.setFont('times', 'bold');
+        doc.text(exp.position, 20, yPosition);
+        doc.setFont('times', 'normal');
+        doc.text(exp.company, 20, yPosition + 4);
+        
+        // Period
+        doc.text(exp.period, 170, yPosition, { align: 'right' });
+        
+        yPosition += 10;
+        
+        // Description
+        const descLines = doc.splitTextToSize(exp.description, 170);
+        doc.text(descLines, 20, yPosition);
+        yPosition += (descLines.length * 4) + 8;
 
-  // Add separator line except for last item
-  if (index < cvContent.experience.length - 1) {
-    doc.setDrawColor(200, 200, 200);
-    doc.line(20, yPosition, 190, yPosition);
-    yPosition += 5;
-  }
-});
+        // Add separator line except for last item
+        if (index < cvContent.experience.length - 1) {
+          doc.setDrawColor(200, 200, 200);
+          doc.line(20, yPosition, 190, yPosition);
+          yPosition += 5;
+        }
+      });
 
-// Add new page for additional sections if needed
-if (yPosition > 200) {
-  doc.addPage();
-  yPosition = 20;
-}
+      // Add new page for additional sections if needed
+      if (yPosition > 200) {
+        doc.addPage();
+        yPosition = 20;
+      }
 
-// Computer Proficiency
-doc.setFontSize(16);
-doc.setFont('helvetica', 'bold');
-doc.text('COMPUTER PROFICIENCY', 20, yPosition);
-yPosition += 10;
-doc.setFontSize(10);
-doc.setFont('helvetica', 'normal');
-const proficiencyItems = [
-  'Programming Languages: HTML, CSS, JavaScript, Debugging',
-  'Software & Tools: Microsoft Office Suite, SAP, EDMS',
-  'Data Management: Spreadsheets, Data Visualization, Web Debugging',
-  'System Maintenance: Basic Networking, Hardware/Software Troubleshooting'
-];
-proficiencyItems.forEach((item, index) => {
-  doc.text(`• ${item}`, 20, yPosition + (index * 5));
-});
-yPosition += (proficiencyItems.length * 5) + 10;
+      // Computer Proficiency
+      doc.setFontSize(16);
+      doc.setFont('times', 'bold');
+      doc.text('COMPUTER PROFICIENCY', 20, yPosition);
+      yPosition += 10;
+      doc.setFontSize(10);
+      doc.setFont('times', 'normal');
+      const proficiencyItems = [
+        'Programming Languages: HTML, CSS, JavaScript, Debugging',
+        'Software & Tools: Microsoft Office Suite, SAP, EDMS',
+        'Data Management: Spreadsheets, Data Visualization, Web Debugging',
+        'System Maintenance: Basic Networking, Hardware/Software Troubleshooting'
+      ];
+      proficiencyItems.forEach((item, index) => {
+        doc.text(`• ${item}`, 20, yPosition + (index * 5));
+      });
+      yPosition += (proficiencyItems.length * 5) + 10;
 
-// Achievements
-doc.setFontSize(16);
-doc.setFont('helvetica', 'bold');
-doc.text('ACHIEVEMENTS', 20, yPosition);
-yPosition += 10;
-doc.setFontSize(10);
-doc.setFont('helvetica', 'normal');
-const achievements = [
-  'Earned Certificate in Web & Computer Programming from BYU-Idaho',
-  'Recognized for exceptional academic performance in BYU Pathway Connect',
-  'Successfully implemented cost-saving inventory measures, reducing waste by 20%',
-  'Developed an efficient document tracking system, reducing errors by 25%',
-  'Processed high volumes of data entry with an accuracy rate exceeding 99%'
-];
-achievements.forEach((achievement, index) => {
-  doc.text(`✔ ${achievement}`, 20, yPosition + (index * 4));
-});
-yPosition += (achievements.length * 4) + 10;
+      // Achievements
+      doc.setFontSize(16);
+      doc.setFont('times', 'bold');
+      doc.text('ACHIEVEMENTS', 20, yPosition);
+      yPosition += 10;
+      doc.setFontSize(10);
+      doc.setFont('times', 'normal');
+      const achievements = [
+        'Earned Certificate in Web & Computer Programming from BYU-Idaho',
+        'Recognized for exceptional academic performance in BYU Pathway Connect',
+        'Successfully implemented cost-saving inventory measures, reducing waste by 20%',
+        'Developed an efficient document tracking system, reducing errors by 25%',
+        'Processed high volumes of data entry with an accuracy rate exceeding 99%'
+      ];
+      achievements.forEach((achievement, index) => {
+        doc.text(`✔ ${achievement}`, 20, yPosition + (index * 4));
+      });
+      yPosition += (achievements.length * 4) + 10;
 
-// Personal Details
-doc.setFontSize(16);
-doc.setFont('helvetica', 'bold');
-doc.text('PERSONAL DETAILS', 20, yPosition);
-yPosition += 10;
-doc.setFontSize(10);
-doc.setFont('helvetica', 'normal');
-const personalDetails = [
-  'Nationality: Turkish',
-  'Date of Birth: 01-08-1995',
-  'Marital Status: Married',
-  'Driving License: Valid',
-  'Languages Known: Turkish, Arabic and English'
-];
-personalDetails.forEach((detail, index) => {
-  doc.text(detail, 20, yPosition + (index * 5));
-});
-yPosition += (personalDetails.length * 5) + 10;
+      // Personal Details
+      doc.setFontSize(16);
+      doc.setFont('times', 'bold');
+      doc.text('PERSONAL DETAILS', 20, yPosition);
+      yPosition += 10;
+      doc.setFontSize(10);
+      doc.setFont('times', 'normal');
+      const personalDetails = [
+        'Nationality: Turkish',
+        'Date of Birth: 01-08-1995',
+        'Marital Status: Married',
+        'Driving License: Valid',
+        'Languages Known: Turkish, Arabic and English'
+      ];
+      personalDetails.forEach((detail, index) => {
+        doc.text(detail, 20, yPosition + (index * 5));
+      });
+      yPosition += (personalDetails.length * 5) + 10;
 
-// Declaration
-doc.setFontSize(16);
-doc.setFont('helvetica', 'bold');
-doc.text('DECLARATION', 20, yPosition);
-yPosition += 10;
-doc.setFontSize(10);
-doc.setFont('helvetica', 'normal');
-doc.text('I hereby declare that all the above information is true to the best of my knowledge and belief.', 20, yPosition);
-yPosition += 10;
-doc.setFont('helvetica', 'italic');
-doc.text('Ethem Deli', 20, yPosition);
-      // Add more sections...
+      // Declaration
+      doc.setFontSize(16);
+      doc.setFont('times', 'bold');
+      doc.text('DECLARATION', 20, yPosition);
+      yPosition += 10;
+      doc.setFontSize(10);
+      doc.setFont('times', 'normal');
+      doc.text('I hereby declare that all the above information is true to the best of my knowledge and belief.', 20, yPosition);
+      yPosition += 10;
+      doc.setFont('times', 'italic');
+      doc.text('Ethem Deli', 20, yPosition);
       
       doc.save(`CV_${cvContent.name}_${lang}.pdf`);
       
