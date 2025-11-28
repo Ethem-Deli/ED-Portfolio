@@ -5,7 +5,7 @@ export default function Projects() {
   const projectCategories = [
     {
       title: "School Projects",
-      link:"src/react-app/pages/projects/school-projects",
+      link:"/projects/school-projects",
       images: [
         "src/assets/images/CSE-110.png",
         "src/assets/images/CSE-111.png",
@@ -15,7 +15,7 @@ export default function Projects() {
     },
     {
       title: "Personal Projects",
-      link: "src/react-app/pages/personal-projects",
+      link: "/projects/personal-projects",
       images: [
         "src/assets/images/personal/portfolio.png",
         "src/assets/images/personal/app.png",
@@ -25,7 +25,7 @@ export default function Projects() {
     },
     {
       title: "Client Projects",
-      link: "src/react-app/pages/client-projects",
+      link: "/projects/client-projects",
       images: [
         "src/assets/images/client/website1.png",
         "src/assets/images/client/dashboard.png",

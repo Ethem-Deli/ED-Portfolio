@@ -28,7 +28,7 @@ export default function PersonalProjects() {
     },
 
     // ------------------------------------------------
-    // ⭐ Add more PERSONAL PROJECTS here
+    // to be added more PERSONAL PROJECTS here
     // ------------------------------------------------
   ];
 
