@@ -5,11 +5,11 @@ export default function Projects() {
   const projectCategories = [
     {
       title: "School Projects",
-      link:"/projects/school-projects",
+      link:"projects/school-projects",
       images: [
-        "src/assets/images/CSE-110.png",
-        "src/assets/images/CSE-111.png",
-        "src/assets/images/CSE-210.png",
+        "assets/images/CSE-110.png",
+        "assets/images/CSE-111.png",
+        "assets/images/CSE-210.png",
         // add more images here...
       ],
     },
