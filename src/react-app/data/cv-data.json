@@ -1,0 +1,98 @@
+{
+  "en": {
+    "name": "Your Name",
+    "title": "Full Stack Developer",
+    "email": "your.email@example.com",
+    "phone": "+1234567890",
+    "location": "Your City, Country",
+    "summary": "Experienced full-stack developer with expertise in modern web technologies...",
+    "experience": [
+      {
+        "position": "Senior Developer",
+        "company": "Tech Company",
+        "period": "2020 - Present",
+        "description": "Developed and maintained web applications..."
+      }
+    ],
+    "education": [
+      {
+        "degree": "Bachelor in Computer Science",
+        "institution": "University Name",
+        "year": "2020"
+      }
+    ],
+    "skills": ["React", "Node.js", "TypeScript", "MongoDB", "PostgreSQL"]
+  },
+  "ar": {
+    "name": "اسمك",
+    "title": "مطور Full Stack",
+    "email": "your.email@example.com",
+    "phone": "+1234567890",
+    "location": "مدينتك، بلدك",
+    "summary": "مطور Full Stack ذو خبرة في تقنيات الويب الحديثة...",
+    "experience": [
+      {
+        "position": "مطور أول",
+        "company": "شركة التقنية",
+        "period": "٢٠٢٠ - الحاضر",
+        "description": "تطوير وصيانة تطبيقات الويب..."
+      }
+    ],
+    "education": [
+      {
+        "degree": "بكالوريوس في علوم الحاسب",
+        "institution": "اسم الجامعة",
+        "year": "٢٠٢٠"
+      }
+    ],
+    "skills": ["React", "Node.js", "TypeScript", "MongoDB", "PostgreSQL"]
+  },
+  "tr": {
+    "name": "Adınız",
+    "title": "Full Stack Geliştirici",
+    "email": "your.email@example.com",
+    "phone": "+1234567890",
+    "location": "Şehriniz, Ülkeniz",
+    "summary": "Modern web teknolojilerinde uzman, deneyimli full-stack geliştirici...",
+    "experience": [
+      {
+        "position": "Kıdemli Geliştirici",
+        "company": "Teknoloji Şirketi",
+        "period": "2020 - Günümüz",
+        "description": "Web uygulamaları geliştirdi ve sürdürdü..."
+      }
+    ],
+    "education": [
+      {
+        "degree": "Bilgisayar Bilimleri Lisansı",
+        "institution": "Üniversite Adı",
+        "year": "2020"
+      }
+    ],
+    "skills": ["React", "Node.js", "TypeScript", "MongoDB", "PostgreSQL"]
+  },
+  "tl": {
+    "name": "Iyong Pangalan",
+    "title": "Full Stack Developer",
+    "email": "your.email@example.com",
+    "phone": "+1234567890",
+    "location": "Iyong Lungsod, Bansa",
+    "summary": "Espesyalista sa modernong web technologies na may karanasan bilang full-stack developer...",
+    "experience": [
+      {
+        "position": "Senior Developer",
+        "company": "Tech Company",
+        "period": "2020 - Kasalukuyan",
+        "description": "Bumuo at nagpanatili ng web applications..."
+      }
+    ],
+    "education": [
+      {
+        "degree": "Bachelor sa Computer Science",
+        "institution": "Pangalan ng Unibersidad",
+        "year": "2020"
+      }
+    ],
+    "skills": ["React", "Node.js", "TypeScript", "MongoDB", "PostgreSQL"]
+  }
+}

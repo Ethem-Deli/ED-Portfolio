@@ -1,10 +1,61 @@
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import { Download, ExternalLink, Code2, Database, Wrench, Terminal, Palette, Smartphone, Server, Cloud, GitBranch, Cpu } from 'lucide-react';
+import { Download, ExternalLink, Code2, Database, Wrench, Terminal, Palette, Smartphone, Server, Cloud, GitBranch, Cpu, ChevronDown } from 'lucide-react';
+import { useState, useRef, useEffect } from 'react';
 import SkillCard from '@/react-app/components/SkillCard';
+import cvData from '@/react-app/data/cv-data.json';
+
+// TypeScript interfaces for the CV data
+interface CVExperience {
+  position: string;
+  company: string;
+  period: string;
+  description: string;
+}
+
+interface CVEducation {
+  degree: string;
+  institution: string;
+  year: string;
+}
+
+interface CVContent {
+  name: string;
+  title: string;
+  email: string;
+  phone: string;
+  location: string;
+  summary: string;
+  experience: CVExperience[];
+  education: CVEducation[];
+  skills: string[];
+}
+
+interface CVData {
+  en: CVContent;
+  ar: CVContent;
+  tr: CVContent;
+  tl: CVContent;
+}
+
+interface Language {
+  code: keyof CVData;
+  name: string;
+  flag: string;
+}
 
 export default function Home() {
   const { t } = useTranslation();
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [selectedLanguage, setSelectedLanguage] = useState<keyof CVData>('en');
+  const dropdownRef = useRef<HTMLDivElement>(null);
+
+  const languages: Language[] = [
+    { code: 'en', name: 'English', flag: '🇺🇸' },
+    { code: 'ar', name: 'العربية', flag: '🇸🇦' },
+    { code: 'tr', name: 'Türkçe', flag: '🇹🇷' },
+    { code: 'tl', name: 'Tagalog', flag: '🇵🇭' }
+  ];
 
   const frontendSkills = [
     { name: 'React', icon: Code2 },
@@ -29,6 +80,63 @@ export default function Home() {
     { name: 'Linux', icon: Cpu },
     { name: 'Figma', icon: Wrench },
   ];
+
+  const generateCV = async (lang: keyof CVData) => {
+    try {
+      const cvContent = (cvData as CVData)[lang];
+      const selectedLang = languages.find(l => l.code === lang);
+      
+      if (!selectedLang) {
+        alert('Language not found');
+        return;
+      }
+
+      // simulate the download
+      alert(`Downloading CV in ${selectedLang.name}...`);
+      
+      const { jsPDF } = await import('jspdf');
+      const doc = new jsPDF();
+      
+      // Add profile picture
+      const imgData = '/path/to/your/profile-picture.jpg';
+      doc.addImage(imgData, 'JPEG', 15, 15, 30, 30);
+      
+      // CV content
+      doc.setFontSize(20);
+      doc.text(cvContent.name, 60, 25);
+      doc.setFontSize(14);
+      doc.text(cvContent.title, 60, 35);
+      doc.text(cvContent.email, 60, 45);
+      doc.text(cvContent.phone, 60, 55);
+      doc.text(cvContent.location, 60, 65);
+      
+      // Add more sections...
+      
+      doc.save(`CV_${cvContent.name}_${lang}.pdf`);
+      
+    } catch (error) {
+      console.error('Error generating CV:', error);
+      alert('Error generating CV. Please try again.');
+    }
+  };
+
+  const handleLanguageSelect = (lang: keyof CVData) => {
+    setSelectedLanguage(lang);
+    setIsDropdownOpen(false);
+    generateCV(lang);
+  };
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setIsDropdownOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
 
   return (
     <div className="min-h-screen bg-[#0b0c10]">
@@ -77,7 +185,7 @@ export default function Home() {
               transition={{ delay: 0.2 }}
             >
               <span className="text-animated-gradient">
-              {t('hero.name')}
+                {t('hero.name')}
               </span>
             </motion.h1>
 
@@ -85,9 +193,10 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
-              className="text-2xl sm:text-3xl text-[#66fcf1]/80 font-semibold mb-6">
+              className="text-2xl sm:text-3xl text-[#66fcf1]/80 font-semibold mb-6"
+            >
               <span className="text-animated-gradient">
-              {t('hero.subtitle')}
+                {t('hero.subtitle')}
               </span>
             </motion.div>
 
@@ -106,15 +215,49 @@ export default function Home() {
               transition={{ delay: 0.8 }}
               className="flex flex-col sm:flex-row gap-4 justify-center items-center"
             >
-              <motion.a
-                href="#"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="group relative px-8 py-4 bg-gradient-to-r from-[#66fcf1] to-[#45a29e] rounded-lg font-semibold text-[#0b0c10] shadow-lg shadow-[#66fcf1]/50 hover:shadow-[#66fcf1]/70 transition-all duration-300 flex items-center space-x-2"
-              >
-                <Download className="w-5 h-5" />
-                <span>{t('hero.downloadCV')}</span>
-              </motion.a>
+              {/* Download CV with Dropdown */}
+              <div className="relative" ref={dropdownRef}>
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                  className="group relative px-8 py-4 bg-gradient-to-r from-[#66fcf1] to-[#45a29e] rounded-lg font-semibold text-[#0b0c10] shadow-lg shadow-[#66fcf1]/50 hover:shadow-[#66fcf1]/70 transition-all duration-300 flex items-center space-x-2"
+                >
+                  <Download className="w-5 h-5" />
+                  <span>{t('hero.downloadCV')}</span>
+                  <ChevronDown 
+                    className={`w-4 h-4 transition-transform duration-200 ${
+                      isDropdownOpen ? 'rotate-180' : ''
+                    }`} 
+                  />
+                </motion.button>
+
+                {/* Dropdown Menu */}
+                {isDropdownOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    className="absolute top-full left-0 mt-2 w-48 bg-[#1f2833] border border-[#66fcf1]/20 rounded-lg shadow-2xl shadow-[#66fcf1]/10 backdrop-blur-lg z-50"
+                  >
+                    <div className="p-2">
+                      {languages.map((language) => (
+                        <button
+                          key={language.code}
+                          onClick={() => handleLanguageSelect(language.code)}
+                          className={`w-full text-left px-3 py-2 rounded-md transition-all duration-200 flex items-center space-x-3 ${
+                            selectedLanguage === language.code
+                              ? 'bg-[#66fcf1]/20 text-[#66fcf1]'
+                              : 'text-white/80 hover:bg-[#66fcf1]/10 hover:text-[#66fcf1]'
+                          }`}
+                        >
+                          <span className="text-lg">{language.flag}</span>
+                          <span className="font-medium">{language.name}</span>
+                        </button>
+                      ))}
+                    </div>
+                  </motion.div>
+                )}
+              </div>
 
               <motion.a
                 href="#projects"
@@ -128,6 +271,7 @@ export default function Home() {
             </motion.div>
           </motion.div>
         </div>
+
         {/* Scroll Indicator */}
         <motion.div
           animate={{ y: [0, 10, 0] }}
