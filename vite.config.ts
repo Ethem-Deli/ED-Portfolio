@@ -1,10 +1,13 @@
 import path from "path";
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
-import { cloudflare } from "@cloudflare/vite-plugin";
+
+const isCloudflare = process.env.CF_PAGES === '1';
 
 export default defineConfig({
-  plugins: [react(), cloudflare()],
+  plugins: isCloudflare 
+    ? [react()]
+    : [react()],
 
   server: {
     allowedHosts: true,
