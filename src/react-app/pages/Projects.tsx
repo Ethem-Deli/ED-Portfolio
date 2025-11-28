@@ -1,37 +1,38 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Link } from "react-router-dom";
+
+// School project images
+import CSE110 from "@/assets/images/CSE-110.png";
+import CSE111 from "@/assets/images/CSE-111.png";
+import CSE210 from "@/assets/images/CSE-210.png";
+
+// Personal project images (add your actual images)
+import PortfolioImg from "@/assets/images/personal/portfolio.png";
+import AppImg from "@/assets/images/personal/app.png";
+import GameImg from "@/assets/images/personal/game.png";
+
+// Client project images (add your actual images)
+import Website1Img from "@/assets/images/client/website1.png";
+import DashboardImg from "@/assets/images/client/dashboard.png";
+import MobileImg from "@/assets/images/client/mobile.png";
 
 export default function Projects() {
   const projectCategories = [
     {
       title: "School Projects",
-      link:"projects/school-projects",
-      images: [
-        "assets/images/CSE-110.png",
-        "assets/images/CSE-111.png",
-        "assets/images/CSE-210.png",
-        // add more images here...
-      ],
+      link: "/projects/school-projects",
+      images: [CSE110, CSE111, CSE210], // Use imported images, not strings
     },
     {
       title: "Personal Projects",
       link: "/projects/personal-projects",
-      images: [
-        "src/assets/images/personal/portfolio.png",
-        "src/assets/images/personal/app.png",
-        "src/assets/images/personal/game.png",
-        // add more images here...
-      ],
+      images: [PortfolioImg, AppImg, GameImg], // Use imported images
     },
     {
       title: "Client Projects",
       link: "/projects/client-projects",
-      images: [
-        "src/assets/images/client/website1.png",
-        "src/assets/images/client/dashboard.png",
-        "src/assets/images/client/mobile.png",
-        // add more images here...
-      ],
+      images: [Website1Img, DashboardImg, MobileImg], // Use imported images
     },
   ];
 
@@ -89,11 +90,11 @@ export default function Projects() {
         >
           {/* LEFT TEXT */}
           <div className="w-full md:w-1/2 flex flex-col gap-2">
-            <a href={category.link}>
-            <h2 className="text-2xl md:text-3xl font-semibold text-[#66fcf1]">
-              {category.title}
+            <Link to={category.link}>
+              <h2 className="text-2xl md:text-3xl font-semibold text-[#66fcf1] hover:text-[#45a29e] transition-colors">
+                {category.title}
               </h2>
-              </a>
+            </Link>
             <p className="text-gray-300 text-sm md:text-base">
               Some highlighted works from my {category.title}.
             </p>
@@ -112,10 +113,15 @@ export default function Projects() {
               <motion.img
                 key={indexes[i]}
                 src={category.images[indexes[i]]}
+                alt={`${category.title} preview ${indexes[i] + 1}`}
                 className="w-full h-full object-contain rounded-lg"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.6 }}
+                onError={() => {
+                  console.error(`Failed to load image: ${category.images[indexes[i]]}`);
+                  // You can set a fallback image here
+                }}
               />
             </div>
           </motion.div>
@@ -130,12 +136,13 @@ export default function Projects() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
+            onClick={() => setModalOpen(false)}
           >
             {/* MODAL CONTENT */}
-            <div className="relative w-[90%] max-w-3xl p-4">
+            <div className="relative w-[90%] max-w-3xl p-4" onClick={(e) => e.stopPropagation()}>
               {/* CLOSE BUTTON */}
               <button
-                className="absolute top-2 right-2 text-white text-3xl hover:text-[#66fcf1]"
+                className="absolute top-2 right-2 text-white text-3xl hover:text-[#66fcf1] z-10 bg-black bg-opacity-50 rounded-full w-10 h-10 flex items-center justify-center"
                 onClick={() => setModalOpen(false)}
               >
                 ✕
@@ -145,6 +152,7 @@ export default function Projects() {
               <motion.img
                 key={modalIndex}
                 src={modalImages[modalIndex]}
+                alt={`Project image ${modalIndex + 1}`}
                 className="w-full max-h-[75vh] object-contain mx-auto"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -155,7 +163,7 @@ export default function Projects() {
               <div className="absolute top-1/2 left-2 transform -translate-y-1/2">
                 <button
                   onClick={prevImage}
-                  className="text-white text-4xl hover:text-[#66fcf1]"
+                  className="text-white text-4xl hover:text-[#66fcf1] bg-black bg-opacity-50 rounded-full w-12 h-12 flex items-center justify-center"
                 >
                   ❮
                 </button>
@@ -164,10 +172,15 @@ export default function Projects() {
               <div className="absolute top-1/2 right-2 transform -translate-y-1/2">
                 <button
                   onClick={nextImage}
-                  className="text-white text-4xl hover:text-[#66fcf1]"
+                  className="text-white text-4xl hover:text-[#66fcf1] bg-black bg-opacity-50 rounded-full w-12 h-12 flex items-center justify-center"
                 >
                   ❯
                 </button>
+              </div>
+
+              {/* IMAGE COUNTER */}
+              <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white bg-black bg-opacity-50 px-3 py-1 rounded-full">
+                {modalIndex + 1} / {modalImages.length}
               </div>
             </div>
           </motion.div>
