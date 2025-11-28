@@ -1,0 +1,34 @@
+{
+  "nav": {
+    "home": "Home",
+    "cv": "CV",
+    "studies": "Studies",
+    "certificates": "Certificates",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "hero": {
+    "name": "Ethem Deli",
+    "subtitle": "DeliDev",
+    "profession": "Web Developer · Programmer · Designer",
+    "downloadCV": "Download CV",
+    "viewProjects": "View Projects"
+  },
+  "skills": {
+    "title": "Skills & Technologies",
+    "frontend": "Frontend Development",
+    "backend": "Backend Development",
+    "tools": "Tools & Technologies"
+  },
+  "summary": {
+    "title": "Professional Summary",
+    "description": "Passionate web developer with expertise in modern frontend and backend technologies. Experienced in building scalable, responsive applications with clean code and best practices."
+  },
+  "experience": {
+    "title": "Experience & Education"
+  },
+  "footer": {
+    "rights": "All rights reserved",
+    "madeWith": "Made with"
+  }
+}

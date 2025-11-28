@@ -1,0 +1,34 @@
+{
+  "nav": {
+    "home": "Bahay",
+    "cv": "CV",
+    "studies": "Pag-aaral",
+    "certificates": "Mga Sertipiko",
+    "projects": "Mga Proyekto",
+    "contact": "Kontak"
+  },
+  "hero": {
+    "name": "Ethem Deli",
+    "subtitle": "DeliDev",
+    "profession": "Web Developer · Programmer · Designer",
+    "downloadCV": "I-download ang CV",
+    "viewProjects": "Tingnan ang Mga Proyekto"
+  },
+  "skills": {
+    "title": "Kasanayan at Teknolohiya",
+    "frontend": "Frontend Development",
+    "backend": "Backend Development",
+    "tools": "Mga Kasangkapan at Teknolohiya"
+  },
+  "summary": {
+    "title": "Propesyonal na Buod",
+    "description": "Masigasig na web developer na may kasanayan sa modernong frontend at backend na teknolohiya. May karanasan sa pagbuo ng scalable at responsive na mga aplikasyon gamit ang malinis na code at pinakamahusay na mga praktis."
+  },
+  "experience": {
+    "title": "Karanasan at Edukasyon"
+  },
+  "footer": {
+    "rights": "Lahat ng karapatan ay nakalaan",
+    "madeWith": "Ginawa nang may"
+  }
+}

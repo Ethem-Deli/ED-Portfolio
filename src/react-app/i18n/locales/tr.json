@@ -1,0 +1,34 @@
+{
+  "nav": {
+    "home": "Ana Sayfa",
+    "cv": "Özgeçmiş",
+    "studies": "Eğitim",
+    "certificates": "Sertifikalar",
+    "projects": "Projeler",
+    "contact": "İletişim"
+  },
+  "hero": {
+    "name": "Ethem Deli",
+    "subtitle": "DeliDev",
+    "profession": "Web Geliştirici · Programcı · Tasarımcı",
+    "downloadCV": "CV İndir",
+    "viewProjects": "Projeleri Görüntüle"
+  },
+  "skills": {
+    "title": "Yetenekler ve Teknolojiler",
+    "frontend": "Frontend Geliştirme",
+    "backend": "Backend Geliştirme",
+    "tools": "Araçlar ve Teknolojiler"
+  },
+  "summary": {
+    "title": "Profesyonel Özet",
+    "description": "Modern frontend ve backend teknolojilerinde uzmanlığa sahip tutkulu web geliştiricisi. Temiz kod ve en iyi uygulamalarla ölçeklenebilir, duyarlı uygulamalar oluşturma deneyimi."
+  },
+  "experience": {
+    "title": "Deneyim ve Eğitim"
+  },
+  "footer": {
+    "rights": "Tüm hakları saklıdır",
+    "madeWith": "ile yapıldı"
+  }
+}
