@@ -41,6 +41,9 @@ importers:
       react-router-dom:
         specifier: ^7.9.6
         version: 7.9.6(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      react-zoom-pan-pinch:
+        specifier: ^3.7.0
+        version: 3.7.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       zod:
         specifier: ^3.24.3
         version: 3.25.76
@@ -1685,6 +1688,13 @@ packages:
     peerDependenciesMeta:
       react-dom:
         optional: true
+
+  react-zoom-pan-pinch@3.7.0:
+    resolution: {integrity: sha512-UmReVZ0TxlKzxSbYiAj+LeGRW8s8LraAFTXRAxzMYnNRgGPsxCudwZKVkjvGmjtx7SW/hZamt69NUmGf4xrkXA==}
+    engines: {node: '>=8', npm: '>=5'}
+    peerDependencies:
+      react: '*'
+      react-dom: '*'
 
   react@19.0.0:
     resolution: {integrity: sha512-V8AVnmPIICiWpGfm6GLzCR/W5FXLchHop40W4nXBmdlEceh16rCN8O8LNWm5bh5XUX91fh7KpA+W0TgMKmgTpQ==}
@@ -3380,6 +3390,11 @@ snapshots:
       react: 19.0.0
       set-cookie-parser: 2.7.2
     optionalDependencies:
+      react-dom: 19.0.0(react@19.0.0)
+
+  react-zoom-pan-pinch@3.7.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0):
+    dependencies:
+      react: 19.0.0
       react-dom: 19.0.0(react@19.0.0)
 
   react@19.0.0: {}
